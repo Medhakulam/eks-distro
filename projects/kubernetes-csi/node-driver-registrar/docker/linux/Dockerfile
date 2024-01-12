@@ -18,6 +18,7 @@ FROM $BASE_IMAGE
 ARG TARGETARCH=amd64
 ARG TARGETOS=linux
 
-
-COPY bin/node-driver-registrar/$TARGETOS-$TARGETARCH/csi-node-driver-registrar /csi-node-driver-registrar
+COPY LICENSES /LICENSES
+COPY ATTRIBUTION.txt /ATTRIBUTION.txt
+COPY csi-node-driver-registrar /csi-node-driver-registrar
 ENTRYPOINT ["/csi-node-driver-registrar"]

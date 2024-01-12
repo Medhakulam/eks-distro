@@ -20,5 +20,5 @@ ARG TARGETOS=linux
 
 COPY LICENSES /LICENSES
 COPY ATTRIBUTION.txt /ATTRIBUTION.txt
-COPY bin/external-attacher/$TARGETOS-$TARGETARCH/csi-attacher /csi-attacher
+COPY csi-attacher /csi-attacher
 ENTRYPOINT ["/csi-attacher"]

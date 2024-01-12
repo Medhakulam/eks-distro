@@ -18,6 +18,7 @@ FROM $BASE_IMAGE
 ARG TARGETARCH=amd64
 ARG TARGETOS=linux
 
-
-COPY bin/external-snapshotter/$TARGETOS-$TARGETARCH/csi-snapshotter /csi-snapshotter
+COPY LICENSES /LICENSES
+COPY ATTRIBUTION.txt /ATTRIBUTION.txt
+COPY csi-snapshotter /csi-snapshotter
 ENTRYPOINT ["/csi-snapshotter"]

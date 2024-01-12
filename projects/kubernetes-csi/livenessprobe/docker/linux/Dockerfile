@@ -18,6 +18,7 @@ FROM $BASE_IMAGE
 ARG TARGETARCH=amd64
 ARG TARGETOS=linux
 
-
-COPY bin/livenessprobe/$TARGETOS-$TARGETARCH/livenessprobe /livenessprobe
+COPY LICENSES /LICENSES
+COPY ATTRIBUTION.txt /ATTRIBUTION.txt
+COPY livenessprobe /livenessprobe
 ENTRYPOINT ["/livenessprobe"]
