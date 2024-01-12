@@ -18,6 +18,7 @@ FROM $BASE_IMAGE
 ARG TARGETARCH=amd64
 ARG TARGETOS=linux
 
-
-COPY bin/external-resizer/$TARGETOS-$TARGETARCH/csi-resizer /csi-resizer
+COPY LICENSES /LICENSES
+COPY ATTRIBUTION.txt /ATTRIBUTION.txt
+COPY csi-resizer /csi-resizer
 ENTRYPOINT ["/csi-resizer"]

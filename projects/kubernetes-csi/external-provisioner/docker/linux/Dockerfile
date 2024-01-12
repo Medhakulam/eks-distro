@@ -18,6 +18,7 @@ FROM $BASE_IMAGE
 ARG TARGETARCH=amd64
 ARG TARGETOS=linux
 
-
-COPY bin/external-provisioner/$TARGETOS-$TARGETARCH/csi-provisioner /csi-provisioner
+COPY LICENSES /LICENSES
+COPY ATTRIBUTION.txt /ATTRIBUTION.txt
+COPY csi-provisioner /csi-provisioner
 ENTRYPOINT ["/csi-provisioner"]
